@@ -48,17 +48,16 @@ var users = [
 window.addEventListener('load',function()
 {
     function search() {
-            results.innerHTML='hola';
-    
+   
             //get hobby
             var hobbyField = document.getElementById('hobby');
-            var hobby = hobbyField.value;
+            var selectHobby = hobbyField.selectedIndex;
+            var hobby = hobbyField.options[selectHobby].value;
     
             //get gender
             var genderField = document.getElementById('gender');
             var selected = genderField.selectedIndex;
             var gender = genderField.options[selected].value;
-    
     
             var resultsHTML = '';
             var numUsers = users.length;
@@ -71,16 +70,17 @@ window.addEventListener('load',function()
                         resultsHTML += '<div class="person-row">\
                         <img src="images/'+ users[i].avatar +'" />\
                         <div class="person-info">\
-                    <div>'+users[i].name+'</div>\
-                    <div>'+users[i].hobby+'</div></div>\
-                    <button>Add as friend</button></div>';
+                        <div>'+users[i].name+'</div>\
+                        <div>'+users[i].hobby+'</div></div>\
+                        <button>Add as friend</button></div>';
                     }
+                }
             }
-        }
             results.innerHTML = resultsHTML;
         };
         
     var results = document.getElementById('results');
     var searchBtn = document.getElementById('searchBtn');
     searchBtn.addEventListener('click', search);
+    search();
 });

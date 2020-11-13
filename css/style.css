@@ -1,3 +1,27 @@
+#gender{
+    width: 200px;
+    border-radius: 5px;
+}
+#hobby{
+    width: 200px;
+    border-radius: 5px;
+}
+#searchBtn{
+    width: 100px;
+    border-radius:10px;
+    background: white;
+    border: 2px solid  rgba(185, 83, 65, 0.719);
+    color: rgba(185, 83, 65, 0.719);
+    font-weight: bold;
+}
+#searchBtn:hover{
+    width: 100px;
+    border-radius:10px;
+    background: rgba(185, 83, 65, 0.719);
+    border: 2px solid;
+    color: white;
+    font-weight: bold;
+}
 body {
     font-family: helvetica;
 }
@@ -42,4 +66,21 @@ h1 {
 
 .person-row > button {
     float: right;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    border: solid 2px black;
+    font-weight: bold;
+    background: rgb(252, 252, 252);
+}
+
+.person-row > button:hover {
+    float: right;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    border: solid 2px white;
+    background: rgb(80, 79, 79);
+    color: white;
+    font-weight: bold;
 }
